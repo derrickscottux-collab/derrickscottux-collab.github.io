@@ -2,8 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
-
-base: "/portfolio"
-
+export default defineConfig({
 site: "https://derrickscottux-collab.github.io"
+base: "/"
+});
