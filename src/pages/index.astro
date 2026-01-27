@@ -1,0 +1,384 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" data-theme="default">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kwesi Designs | Portfolio</title>
+    <meta
+      name="description"
+      content="Kwesi Designs. UX & technical writing, visual design, game design, and exploratory work."
+    />
+
+    <!-- Small page-only tweaks for the hero layout + headshot crop -->
+    <style>
+      /* Make the left side a column so we can pin pills to the bottom */
+      .heroLeft{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      /* Push the pill row to the bottom of the hero-left column */
+      .heroLeft .heroMeta{
+        margin-top: auto;
+        padding-top: 14px;
+      }
+
+      /* Optional: slightly tighten vertical rhythm */
+      .heroTitle{ margin-bottom: 10px; }
+
+      /* Headshot: keep original sizing (not tall), but lightly crop away empty padding */
+      .humanImgWrap{
+        /* keep your global styles, just ensure overflow crops the transform */
+        overflow: hidden;
+      }
+
+      .humanImg{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Copy inside the human card: clean and not cheesy */
+      .humanNotes{
+        margin: 10px 0 0;
+        line-height: 1.55;
+        font-size: 14px;
+      }
+
+      /* Featured projects styling */
+      .featuredGrid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      @media (max-width: 900px){
+        .featuredGrid{ grid-template-columns: 1fr; }
+      }
+
+      .featuredProjectWrap{
+        position: relative;
+        border: 1px solid var(--border3);
+        background: var(--surface);
+        border-radius: 18px;
+        padding: 16px;
+        transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      }
+
+      .featuredProjectWrap:hover{
+        transform: translateY(-2px);
+        background: var(--surfaceHover);
+        border-color: var(--border3);
+      }
+
+      .featuredProjectLink{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        text-decoration: none;
+      }
+
+      .featuredBadge{
+        position: relative;
+        z-index: 0;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: var(--accentBg);
+        color: var(--accentText);
+        margin-bottom: 10px;
+        pointer-events: none;
+      }
+
+      .featuredTitle{
+        position: relative;
+        z-index: 0;
+        font-size: 20px;
+        font-weight: 850;
+        letter-spacing: .1px;
+        margin: 0 0 8px;
+        color: var(--text2);
+        pointer-events: none;
+      }
+
+      .featuredDesc{
+        position: relative;
+        z-index: 0;
+        margin: 0 0 14px;
+        line-height: 1.6;
+        color: var(--textSoft);
+        pointer-events: none;
+      }
+
+      .featuredActions{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        pointer-events: none;
+      }
+
+      .featuredActions a{
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="topbar">
+      <div class="container topbarInner">
+        <a class="brand" href="/" aria-label="Home">
+          <div class="brandText">
+            <div class="brandKicker">Kwesi Designs</div>
+            <div class="brandName">Derrick Scott</div>
+          </div>
+        </a>
+
+        <nav class="topnav" aria-label="Primary navigation">
+          <a class="navLink" href="/ux">UX & Tech Writing</a>
+          <a class="navLink" href="/visual">Visual</a>
+          <a class="navLink" href="/game">Game</a>
+          <a class="navLink" href="/explore">Explore</a>
+          <a class="navBtn" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 18px 0 58px;">
+      <!-- Hero -->
+      <section class="hero card">
+        <div class="heroGrid">
+          <div class="heroLeft">
+            <h1 class="heroTitle">Aesthetic Designs, Purposefully Crafted</h1>
+            <p class="muted heroIntro">Hi, I'm Derrick Scott!</p>
+<p class="muted heroText">
+  My primary focus is <strong>API documentation</strong> and developer-facing clarity, with a background in
+  <strong>UX, visual design, and interactive systems</strong> through my
+  <strong>Computer Graphics Technology degree</strong>. Most of my recent work centers on OpenAPI specifications,
+  examples, and evidence-backed behavior, but the UX, visual, and game projects here show how I think about structure,
+  flow, and systems more broadly. If you want the strongest signal,
+  <strong>start with UX &amp; Tech Writing.</strong>
+</p>
+
+            <div class="heroActions">
+              <a class="button" href="/ux">Start with UX & Tech Writing</a>
+              <a class="button ghost" href="#work">Browse categories</a>
+            </div>
+
+            <!-- Pills pinned to the bottom of the left column -->
+            <div class="heroMeta" aria-label="Focus areas">
+              <span class="pill">UX</span>
+              <span class="pill">OpenAPI</span>
+              <span class="pill">Technical Writing</span>
+              <span class="pill">Visual</span>
+              <span class="pill">Interactive</span>
+            </div>
+          </div>
+
+          <div class="heroRight">
+            <div class="humanCard">
+              <div class="humanTop">
+                <div class="dot" aria-hidden="true"></div>
+                <div>
+                  <div class="humanTitle">About</div>
+                  <div class="muted humanSub">Multimedia designer focused on clarity and craft.</div>
+                </div>
+              </div>
+
+              <div class="humanImgWrap">
+                <img class="humanImg" src="/assets/headshot.png" alt="Headshot" loading="lazy" />
+              </div>
+
+              <p class="muted humanNotes">
+                North Carolina based. I hold a degree in Computer Graphics Technology with a UX concentration from North Carolina A&T, with a strong focus on design and technical documentation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroGlow" aria-hidden="true"></div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="featured" style="margin-top: 18px;">
+        <div class="card sectionCard">
+          <div class="sectionHead">
+            <h2 class="h2" style="margin:0;">Featured Projects</h2>
+            <p class="muted" style="margin:6px 0 0; max-width: 78ch;">
+              Recent work that demonstrates my approach to documentation and UX thinking.
+            </p>
+          </div>
+
+          <div class="featuredGrid">
+            <!-- GitHub Issues API Documentation -->
+            <div class="featuredProjectWrap">
+              <a href="/ux#github-issues-api-title" class="featuredProjectLink" aria-label="View GitHub Issues API Documentation project"></a>
+              <span class="featuredBadge">API Documentation</span>
+              <h3 class="featuredTitle">GitHub Issues API Documentation</h3>
+              <p class="featuredDesc">
+                Wrote an OpenAPI 3.0.3 specification with examples and supporting evidence so behavior is clear and verifiable. 
+                Focuses on accurate, test-backed documentation for common issue workflows, including edge cases and pagination behavior.
+              </p>
+              <div class="featuredActions">
+                <a class="button" href="https://github.com/derrickscottux-collab/github-issues-openapi-portfolio" target="_blank" rel="noreferrer">View Repo</a>
+                <a class="button ghost" href="https://derrickscottux-collab.github.io/github-issues-openapi-portfolio/" target="_blank" rel="noreferrer">Rendered Docs</a>
+              </div>
+            </div>
+
+            <!-- Cognitive Analysis -->
+            <div class="featuredProjectWrap">
+              <a href="/ux#cognitive-analysis" class="featuredProjectLink" aria-label="View Cognitive Analysis project"></a>
+              <span class="featuredBadge">UX Design</span>
+              <h3 class="featuredTitle">Cognitive Analysis</h3>
+              <p class="featuredDesc">
+                Performed a cognitive walkthrough and redesigned the Aggie Access interface in Figma with clearer information architecture and reduced cognitive load. 
+                Addressed cluttered layout and confusing navigation that slowed down common tasks.
+              </p>
+              <div class="featuredActions">
+                <a class="button" href="https://example.com" target="_blank" rel="noreferrer">Notes</a>
+                <a class="button ghost" href="https://example.com" target="_blank" rel="noreferrer">Prototype</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work hub (4 sections only) -->
+      <section id="work" style="margin-top: 18px;">
+        <div class="card sectionCard">
+          <div class="sectionHead">
+            <h2 class="h2" style="margin:0;">Work</h2>
+            <p class="muted" style="margin:6px 0 0; max-width: 78ch;">
+              Four focused areas. If you only click one, start with UX & Tech Writing.
+            </p>
+          </div>
+
+          <div class="tileGrid">
+            <a class="tile" href="/ux">
+              <div class="tileTop">
+                <div class="tileTitle">UX & Technical Writing</div>
+                <div class="tileArrow" aria-hidden="true">→</div>
+              </div>
+              <div class="tileDesc">API documentation, UX projects, and QA-style clarity.</div>
+              <div class="chips">
+                <span class="chip">OpenAPI</span>
+                <span class="chip">Evidence</span>
+                <span class="chip">DX</span>
+                <span class="chip">UX</span>
+              </div>
+            </a>
+
+            <a class="tile" href="/visual">
+              <div class="tileTop">
+                <div class="tileTitle">Visual Design</div>
+                <div class="tileArrow" aria-hidden="true">→</div>
+              </div>
+              <div class="tileDesc">Brand, layout, and communication design.</div>
+              <div class="chips">
+                <span class="chip">Branding</span>
+                <span class="chip">Layout</span>
+                <span class="chip">Typography</span>
+              </div>
+            </a>
+
+            <a class="tile" href="/game">
+              <div class="tileTop">
+                <div class="tileTitle">Game Design</div>
+                <div class="tileArrow" aria-hidden="true">→</div>
+              </div>
+              <div class="tileDesc">Interactive systems, iteration, and play-focused design.</div>
+              <div class="chips">
+                <span class="chip">Systems</span>
+                <span class="chip">Playtests</span>
+                <span class="chip">Iteration</span>
+              </div>
+            </a>
+
+            <a class="tile" href="/explore">
+              <div class="tileTop">
+                <div class="tileTitle">Exploratory Work</div>
+                <div class="tileArrow" aria-hidden="true">→</div>
+              </div>
+              <div class="tileDesc">Studies and experiments outside structured deliverables.</div>
+              <div class="chips">
+                <span class="chip">Studies</span>
+                <span class="chip">Concepts</span>
+                <span class="chip">Practice</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" style="margin-top: 18px;">
+        <div class="card sectionCard">
+          <div class="sectionHead">
+            <h2 class="h2" style="margin:0;">Contact</h2>
+            <p class="muted" style="margin:6px 0 0; max-width: 78ch;">
+              For roles, collaborations, or questions about anything here.
+            </p>
+          </div>
+
+          <div class="contactRow">
+            <a class="button" href="mailto:derrickscott.ux@gmail.com">Email</a>
+            <a class="button ghost" href="https://www.linkedin.com/in/derrick-scott-980109236/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button ghost" href="https://github.com/derrickscottux-collab" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <div class="footerBrand">Kwesi Designs</div>
+          <p class="muted footerText">
+            UX, technical writing, and systems-minded work.
+          </p>
+          <p class="muted footerText" style="margin-top:10px;">
+            © <span id="year"></span> Derrick Scott · North Carolina, USA
+          </p>
+        </div>
+
+        <div class="footerCols">
+          <div class="footerCol">
+            <div class="footerHead">Work</div>
+            <a class="footerLink" href="/ux">UX & Tech Writing</a>
+            <a class="footerLink" href="/visual">Visual Design</a>
+            <a class="footerLink" href="/game">Game Design</a>
+            <a class="footerLink" href="/explore">Exploratory</a>
+          </div>
+
+          <div class="footerCol">
+            <div class="footerHead">Links</div>
+            <a class="footerLink" href="#contact">Contact</a>
+            <a class="footerLink" href="https://www.linkedin.com/in/derrick-scott-980109236/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="footerLink" href="https://github.com/derrickscottux-collab" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

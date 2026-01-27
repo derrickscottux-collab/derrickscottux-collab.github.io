@@ -1,0 +1,657 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" data-theme="default">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UX & Technical Writing | Kwesi Designs</title>
+    <meta
+      name="description"
+      content="UX and technical writing work, including API documentation and open source documentation contributions."
+    />
+  </head>
+
+  <body>
+    <!-- Shared Header (matches your index) -->
+    <header class="topbar" id="top">
+      <div class="container topbarInner">
+        <a class="brand" href="/" aria-label="Home">
+          <div class="brandText">
+            <div class="brandKicker">Kwesi Designs</div>
+            <div class="brandName">Derrick Scott</div>
+          </div>
+        </a>
+
+        <nav class="topnav" aria-label="Primary navigation">
+          <a class="navLink" href="/ux">UX & Tech Writing</a>
+          <a class="navLink" href="/visual">Visual</a>
+          <a class="navLink" href="/game">Game</a>
+          <a class="navLink" href="/explore">Explore</a>
+          <a class="navBtn" href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 18px 0 58px;">
+      <!-- Page header -->
+      <section class="card sectionCard">
+        <h1 class="h1" style="margin:0 0 10px;">UX & Technical Writing</h1>
+        <p class="muted" style="margin:0; max-width: 86ch; line-height: 1.6;">
+          I focus on API documentation and developer-facing clarity. The UX and QA work below shows how I think about structure,
+          navigation, edge cases, and expected behavior.
+        </p>
+
+        <div class="actions" style="margin-top: 14px;">
+          <a class="button" href="#api-docs">API Docs</a>
+          <a class="button ghost" href="#open-source-docs">Open Source</a>
+          <a class="button ghost" href="#ux-projects">UX</a>
+          <a class="button ghost" href="#qa-testing">QA</a>
+          <a class="button ghost" href="#visual-work">Visual</a>
+        </div>
+      </section>
+
+      <!-- Layout: sidenav + content -->
+      <div class="uxLayout" style="margin-top: 14px;">
+        <aside class="card uxSidenav" aria-label="Jump navigation">
+          <div class="uxSidenavTitle">Jump to</div>
+          <a href="#top">Top</a>
+          <a href="#api-docs">API Documentation</a>
+          <a href="#open-source-docs">Open Source Contributions</a>
+          <a href="#ux-projects">UX Projects</a>
+          <a href="#qa-testing">QA & Testing</a>
+          <a href="#visual-work">Visual / Comms</a>
+        </aside>
+
+        <div class="uxContent">
+          <!-- API Docs -->
+          <section id="api-docs" class="card sectionCard anchorPad">
+            <h2 class="h2" style="margin:0 0 6px;">API Documentation</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Documentation work that prioritizes clarity and testability.
+            </p>
+
+            <div class="project">
+              <div class="meta">
+                <h3 class="title" id="github-issues-api-title">GitHub Issues API Documentation (OpenAPI Spec)</h3>
+
+                <div class="subtitle">Self-directed</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">
+                    Developers need accurate, test-backed documentation for common issue workflows, including edge cases and
+                    pagination behavior.
+                  </p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Wrote an OpenAPI 3.0.3 specification with examples and supporting evidence so behavior is clear and verifiable.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://github.com/derrickscottux-collab/github-issues-openapi-portfolio" target="_blank" rel="noreferrer">View Repo</a>
+                  <a class="button ghost" href="https://derrickscottux-collab.github.io/github-issues-openapi-portfolio/" target="_blank" rel="noreferrer">Rendered Docs</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button
+                  class="imgButton"
+                  type="button"
+                  data-lightbox-src="/assets/ux/openapi-1.png"
+                  data-lightbox-alt="Rendered OpenAPI documentation screenshot"
+                  data-lightbox-title="GitHub Issues API Documentation (OpenAPI Spec)"
+                  aria-label="Open image for GitHub Issues API Documentation (OpenAPI Spec)"
+                >
+                  <img class="img" src="/assets/ux/openapi-1.png" alt="Rendered OpenAPI documentation screenshot" />
+                </button>
+                <p class="muted caption">Rendered documentation view.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Open Source -->
+          <section id="open-source-docs" class="card sectionCard anchorPad" style="margin-top: 14px;">
+            <h2 class="h2" style="margin:0 0 6px;">Open Source Documentation Contributions</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Contributions to existing projects focused on parameter clarity and edge cases.
+            </p>
+
+            <div class="osList">
+              <div class="osItem">
+                <h3 class="osTitle">Open Brewery DB, Search Breweries endpoint</h3>
+                <p class="osMeta"><strong>Status:</strong> ✅ Merged</p>
+                <p class="osNotes">Documented parameters, examples, and edge cases for the search endpoint.</p>
+                <div class="actions">
+                  <a class="button" href="https://github.com/openbrewerydb/openbrewerydb-sveltekit/pull/59" target="_blank" rel="noreferrer">PR</a>
+                  <a class="button ghost" href="https://github.com/openbrewerydb/openbrewerydb-sveltekit" target="_blank" rel="noreferrer">Repo</a>
+                  <a class="button ghost" href="https://www.openbrewerydb.org/documentation" target="_blank" rel="noreferrer">Docs</a>
+                </div>
+              </div>
+
+              <div class="osItem">
+                <h3 class="osTitle">Dog CEO Dog API</h3>
+                <p class="osMeta"><strong>Status:</strong> ✅ Merged</p>
+                <p class="osNotes">Improved the README to clarify breed handling and response structure for <code>/breeds/list/all</code>.</p>
+                <div class="actions">
+                  <a class="button" href="https://github.com/ElliottLandsborough/dog-ceo-api/pull/55" target="_blank" rel="noreferrer">PR</a>
+                  <a class="button ghost" href="https://github.com/ElliottLandsborough/dog-ceo-api" target="_blank" rel="noreferrer">Repo</a>
+                  <a class="button ghost" href="https://github.com/ElliottLandsborough/dog-ceo-api/blob/main/readme.md" target="_blank" rel="noreferrer">README</a>
+                  <a class="button ghost" href="https://dog.ceo/dog-api/" target="_blank" rel="noreferrer">Live API</a>
+                </div>
+              </div>
+
+              <div class="osItem">
+                <h3 class="osTitle">DummyJSON, Products API</h3>
+                <p class="osMeta"><strong>Status:</strong> ⚠️ Closed (not merged)</p>
+                <p class="osNotes">Updated docs for query parameters, validation notes, error handling, and pagination behavior.</p>
+                <div class="actions">
+                  <a class="button" href="https://github.com/Ovi/DummyJSON/pull/109" target="_blank" rel="noreferrer">PR</a>
+                  <a class="button ghost" href="https://github.com/Ovi/DummyJSON" target="_blank" rel="noreferrer">Repo</a>
+                  <a class="button ghost" href="https://dummyjson.com/docs/products" target="_blank" rel="noreferrer">Docs</a>
+                </div>
+              </div>
+
+              <div class="osItem">
+                <h3 class="osTitle">JSONPlaceholder</h3>
+                <p class="osMeta"><strong>Status:</strong> ⚠️ Closed (not merged)</p>
+                <p class="osNotes">Contributed documentation updates in <code>guide.md</code> to clarify usage patterns for common endpoints.</p>
+                <div class="actions">
+                  <a class="button" href="https://github.com/typicode/jsonplaceholder/pull/219" target="_blank" rel="noreferrer">PR</a>
+                  <a class="button ghost" href="https://github.com/typicode/jsonplaceholder" target="_blank" rel="noreferrer">Repo</a>
+                  <a class="button ghost" href="https://github.com/typicode/jsonplaceholder/blob/master/templates/GUIDE.md" target="_blank" rel="noreferrer">guide.md</a>
+                  <a class="button ghost" href="https://jsonplaceholder.typicode.com" target="_blank" rel="noreferrer">Live API</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- UX Projects -->
+          <section id="ux-projects" class="card sectionCard anchorPad" style="margin-top: 14px;">
+            <h2 class="h2" style="margin:0 0 6px;">UX Projects</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Interface design work exploring navigation and information architecture.
+            </p>
+
+            <!-- Cognitive Analysis -->
+            <div class="project" id="cognitive-analysis">
+              <div class="meta">
+                <h3 class="title">Cognitive Analysis</h3>
+                <div class="subtitle">Class: Graphic Design II</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Aggie Access had cluttered layout and confusing navigation that slowed down common tasks.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Performed a cognitive walkthrough and redesigned the interface in Figma with clearer IA and reduced cognitive load.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://www.figma.com/proto/gSLNsZdDsaGfZv6ELtUJBm/AggieAccessRedesign?node-id=2-2&node-type=canvas&t=hPbjzVw8DsAcMguq-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank" rel="noreferrer">Prototype</a>
+                 <a class="button ghost" href="https://drive.google.com/file/d/1Zp1lz9jdJtVkfl_U3XhafpvvdsU_Q0j5/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/cognitive-1.webp"
+                  data-lightbox-alt="Aggie Access redesign screenshot"
+                  data-lightbox-title="Cognitive Analysis">
+                  <img class="img" src="/assets/ux/cognitive-1.webp" alt="Aggie Access redesign screenshot" />
+                </button>
+                <p class="muted caption">Interface redesign concept.</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+      
+            
+
+            <!-- Menu Redesign -->
+            <div class="project" id="menu-redesign">
+              <div class="meta">
+                <h3 class="title">Menu Redesign</h3>
+                <div class="subtitle">Class: Graphic Design II</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Kick Back Jacks needed a digital menu that stayed on-brand and was easier to use.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Designed a mobile menu experience in Figma with clearer categories and faster item selection.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://www.figma.com/proto/D02dRLlCXFi14B3pjQxFWe/KickBack-Jack's-Menu?node-id=0-1&t=wqsv73MkSSqJPgEr-1" target="_blank" rel="noreferrer">Prototype</a>
+                  <a class="button ghost" href="https://drive.google.com/file/d/1kuSyh3Clz2Pn6AaNurf4FPQ--At0lytP/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/menu-1.png"
+                  data-lightbox-alt="Menu redesign mobile UI screenshot"
+                  data-lightbox-title="Menu Redesign">
+                  <img class="img" src="/assets/ux/menu-1.png" alt="Menu redesign mobile UI screenshot" />
+                </button>
+                <p class="muted caption">Digital menu interface.</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Boba Website -->
+            <div class="project" id="boba-website">
+              <div class="meta">
+                <h3 class="title">Boba Website</h3>
+                <div class="subtitle">Class: Graphic Design I</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Boba tea faced heavy competition, especially for a 13 to 24 audience.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Designed the brand and website for a fictional food truck. Created assets in Illustrator and prototyped in Dreamweaver.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://drive.google.com/file/d/1OM273NGGQbmoRLcDWcjiT_lOEb3tYtIP/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/boba-1.webp"
+                  data-lightbox-alt="Boba Tea & Co. website mockup screenshot"
+                  data-lightbox-title="Boba Website">
+                  <img class="img" src="/assets/ux/boba-1.webp" alt="Boba Tea & Co. website mockup screenshot" />
+                </button>
+                <p class="muted caption">Brand and web concept for a food truck.</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+<!-- Meal Order App -->
+            <div class="project" id="meal-order-app">
+              <div class="meta">
+                <h3 class="title">Meal Order App</h3>
+                <div class="subtitle">Class: Interface Design I</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Users need a fast way to discover, browse, and order affordable local food.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Designed BigBackBites in Figma with quick search, order history, and streamlined checkout.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://drive.google.com/file/d/1pFVROM_vOIM_dzX5ZifER55eZQstd3cz/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/bigbackbites-1.png"
+                  data-lightbox-alt="BigBackBites mobile UI screenshot"
+                  data-lightbox-title="Meal Order App (BigBackBites)">
+                  <img class="img" src="/assets/ux/bigbackbites-1.png" alt="BigBackBites mobile UI screenshot" />
+                </button>
+                <p class="muted caption">Mobile ordering interface.</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+             <!-- Parking -->
+            <div class="project" id="parking-app">
+              <div class="meta">
+                <h3 class="title">Parking App</h3>
+                <div class="subtitle">Class: Senior Capstone</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">NC A&T campus lacks an easy parking solution, causing delays and frustration.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Our team developed the "PARK IT FOR AGGIES" app in Figma, focusing on real-time updates and accessibility.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://www.figma.com/proto/XykWOSOfL3WrVR9ztUKXou/Parkit4Aggies?node-id=208-108&node-type=canvas&t=J2yuYjZSINmeKALE-1&scaling=scale-down&content-scaling=fixed&page-id=18%3A170&starting-point-node-id=52%3A64" target="_blank" rel="noreferrer">Prototype</a>
+                 <a class="button ghost" href="https://drive.google.com/file/d/1QQOnuv6f0PdBwXRTf4R_rusY0vMAo1Fn/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/parking-1.png"
+                  data-lightbox-alt="Parking app UI screenshot"
+                  data-lightbox-title="Parking App">
+                  <img class="img" src="/assets/ux/parking-1.png" alt="Parking app UI screenshot" />
+                </button>
+                <p class="muted caption">Parking app prototype interface.</p>
+              </div>
+            </div>
+
+  
+          </section>
+
+          <!-- QA -->
+          <section id="qa-testing" class="card sectionCard anchorPad" style="margin-top: 14px;">
+            <h2 class="h2" style="margin:0 0 6px;">QA & Testing</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Testing work focused on reproduction steps and edge case identification.
+            </p>
+
+            <div class="project" id="qa-playtests">
+              <div class="meta">
+                <h3 class="title">QA Playtests</h3>
+                <div class="subtitle">Freelance</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Enemy AI bugs and inconsistent boss mechanics disrupted core gameplay flow.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Wrote targeted test cases, logged reproducible bugs in JIRA, and collaborated on fixes to stabilize combat behavior.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://drive.google.com/file/d/1qQZ7JV5qizSwt4EBoRYaLJjjx3x4t7oN/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/qa-1.png"
+                  data-lightbox-alt="QA playtest notes screenshot"
+                  data-lightbox-title="QA Playtests">
+                  <img class="img" src="/assets/ux/qa-1.png" alt="QA playtest notes screenshot" />
+                </button>
+                <p class="muted caption">Sample testing documentation.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Visual -->
+          <section id="visual-work" class="card sectionCard anchorPad" style="margin-top: 14px;">
+            <h2 class="h2" style="margin:0 0 6px;">Visual / Communication Work</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Visual design work exploring layout and information hierarchy.
+            </p>
+
+            <div class="project" id="email-campaign">
+              <div class="meta">
+                <h3 class="title">Email Campaign</h3>
+                <div class="subtitle">Class: Web Design II</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">Gamers need timely, engaging communication around promotions like the Steam summer sale.</p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Designed a promo email with clear CTA hierarchy and product spotlighting to support clicks and engagement.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button" href="https://drive.google.com/file/d/1PkWa74kxdK6q_n9oihyTbCdScuX89VK8/view?usp=sharing" target="_blank" rel="noreferrer">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+                <button class="imgButton" type="button"
+                  data-lightbox-src="/assets/ux/email-2.png"
+                  data-lightbox-alt="Steam summer sale email design screenshot"
+                  data-lightbox-title="Email Campaign">
+                  <img class="img" src="/assets/ux/email-1.png" alt="Steam summer sale email design screenshot" />
+                </button>
+                <p class="muted caption">Promotional email design concept.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Lightbox -->
+          <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+            <div class="lightboxTop">
+              <div id="lightboxTitle" class="lightboxTitle"></div>
+              <button class="lightboxClose" type="button" aria-label="Close lightbox">Close</button>
+            </div>
+            <img id="lightboxImg" class="lightboxImg" alt="" />
+          </dialog>
+
+          <script>
+            (function(){
+              const dialog = document.getElementById("lightbox");
+              const img = document.getElementById("lightboxImg");
+              const titleEl = document.getElementById("lightboxTitle");
+              const closeBtn = dialog.querySelector(".lightboxClose");
+
+              function openLightbox(src, alt, title){
+                img.src = src;
+                img.alt = alt || "";
+                titleEl.textContent = title || "";
+                if (typeof dialog.showModal === "function") {
+                  dialog.showModal();
+                } else {
+                  window.open(src, "_blank");
+                }
+              }
+
+              function closeLightbox(){
+                if (dialog.open) dialog.close();
+                img.src = "";
+                img.alt = "";
+                titleEl.textContent = "";
+              }
+
+              document.addEventListener("click", (e) => {
+                const btn = e.target.closest("[data-lightbox-src]");
+                if (!btn) return;
+                openLightbox(btn.dataset.lightboxSrc, btn.dataset.lightboxAlt, btn.dataset.lightboxTitle);
+              });
+
+              closeBtn.addEventListener("click", closeLightbox);
+              dialog.addEventListener("click", (e) => { if (e.target === dialog) closeLightbox(); });
+              document.addEventListener("keydown", (e) => { if (e.key === "Escape" && dialog.open) closeLightbox(); });
+            })();
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <!-- Shared Footer (matches your index) -->
+    <footer class="footer">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <div class="footerBrand">Kwesi Designs</div>
+          <p class="muted footerText">UX, technical writing, and systems-minded work.</p>
+          <p class="muted footerText" style="margin-top:10px;">
+            © {new Date().getFullYear()} Derrick Scott · North Carolina, USA
+          </p>
+        </div>
+
+        <div class="footerCols">
+          <div class="footerCol">
+            <div class="footerHead">Work</div>
+            <a class="footerLink" href="/ux">UX & Tech Writing</a>
+            <a class="footerLink" href="/visual">Visual Design</a>
+            <a class="footerLink" href="/game">Game Design</a>
+            <a class="footerLink" href="/explore">Exploratory</a>
+          </div>
+
+          <div class="footerCol">
+            <div class="footerHead">Links</div>
+            <a class="footerLink" href="/#contact">Contact</a>
+            <a class="footerLink" href="https://www.linkedin.com/in/derrick-scott-980109236/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="footerLink" href="https://github.com/derrickscottux-collab" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Page-only CSS to stabilize layout without fighting global.css -->
+    <style>      .anchorPad{ scroll-margin-top: 92px; }
+
+      .uxLayout{
+        display: grid;
+        grid-template-columns: 270px 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+
+      @media (max-width: 980px){
+        .uxLayout{ grid-template-columns: 1fr; }
+      }
+
+      .uxSidenav{
+        padding: 14px;
+        position: sticky;
+        top: 86px;
+      }
+
+      @media (max-width: 980px){
+        .uxSidenav{ position: static; }
+      }
+
+      .uxSidenavTitle{
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: var(--text2);
+      }
+
+      .uxSidenav a{
+        display: block;
+        padding: 9px 10px;
+        border-radius: 12px;
+        border: 1px solid var(--border2);
+        background: var(--surface2);
+        text-decoration: none;
+        color: var(--textSoft);
+        margin-bottom: 8px;
+        transition: background .18s ease, transform .18s ease, border-color .18s ease;
+      }
+
+      .uxSidenav a:hover{
+        background: var(--surfaceHover);
+        border-color: var(--border3);
+        transform: translateY(-1px);
+      }
+
+      .osList{ display: grid; gap: 12px; }
+
+      .osItem{
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .osTitle{
+        margin: 0 0 6px;
+        font-size: 18px;
+        font-weight: 850;
+      }
+
+      .osMeta, .osNotes{
+        margin: 8px 0 0;
+        color: var(--textSoft);
+        line-height: 1.55;
+      }
+
+      /* Lightbox */
+      .lightbox{
+        border: 1px solid var(--border3);
+        background: var(--overlayBg);
+        border-radius: 18px;
+        padding: 0;
+        width: min(980px, 92vw);
+      }
+
+      .lightbox::backdrop{
+        background: var(--backdrop);
+      }
+
+      .lightboxTop{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap: 12px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .lightboxTitle{
+        font-weight: 850;
+        color: var(--text2);
+      }
+
+      .lightboxClose{
+        padding: 9px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border3);
+        background: var(--surface);
+        color: var(--text2);
+        cursor: pointer;
+      }
+
+      .lightboxClose:hover{
+        background: var(--surfaceHover);
+      }
+
+      .lightboxImg{
+        display:block;
+        width: 100%;
+        height: auto;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+      }
+
+      /* Image hover zoom */
+      .imgButton .img{
+        transition: transform .3s ease;
+      }
+
+      .imgButton:hover .img{
+        transform: scale(1.05);
+      }
+    </style>
+  </body>
+</html>

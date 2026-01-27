@@ -1,0 +1,274 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" data-theme="default">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visual Work | Kwesi Designs</title>
+    <meta
+      name="description"
+      content="Visual work and design projects, including infographics and visual communication pieces."
+    />
+  </head>
+
+  <body>
+    <!-- Shared Header -->
+    <header class="topbar" id="top">
+      <div class="container topbarInner">
+        <a class="brand" href="/" aria-label="Home">
+          <div class="brandText">
+            <div class="brandKicker">Kwesi Designs</div>
+            <div class="brandName">Derrick Scott</div>
+          </div>
+        </a>
+
+        <nav class="topnav" aria-label="Primary navigation">
+          <a class="navLink" href="/ux">UX & Tech Writing</a>
+          <a class="navLink" href="/visual">Visual</a>
+          <a class="navLink" href="/game">Game</a>
+          <a class="navLink" href="/explore">Explore</a>
+          <a class="navBtn" href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 18px 0 58px;">
+      <!-- Page header -->
+      <section class="card sectionCard">
+        <h1 class="h1" style="margin:0 0 10px;">Visual</h1>
+        <p class="muted" style="margin:0; max-width: 86ch; line-height: 1.6;">
+          Infographics and visual communication projects focused on turning complex ideas into clear, readable visuals.
+        </p>
+      </section>
+
+      <!-- Projects (match UX project layout) -->
+      <section class="card sectionCard" style="margin-top: 14px;">
+        <h2 class="h2" style="margin:0 0 7px;">Infographics</h2>
+        <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+          Documentation work that prioritizes clarity and testability.
+        </p>
+        
+        <!-- Interview Infographic -->
+        <div class="project" id="interview-infographic">
+          <div class="meta">
+            <h3 class="title">Interview Infographic</h3>
+            <div class="subtitle">Class: Design Technology</div>
+
+            <div class="block">
+              <div class="label">Problem</div>
+              <p class="text">
+                I needed to visually present insights from an interview with designer Jennifer Boyles for a class final project.
+              </p>
+            </div>
+
+            <div class="block">
+              <div class="label">Solution</div>
+              <p class="text">
+                I created an infographic that highlights nine key questions from the interview, simplifying complex information and
+                showcasing my skills in visual communication.
+              </p>
+            </div>
+
+            <div class="actions">
+              <a class="button" href="https://drive.google.com/file/d/1_0kL-SXpG9U1PTE6Zfea0_4GYoB_fvo8/view?usp=sharing">Case Study</a>
+            </div>
+          </div>
+
+          <div class="media">
+            <button
+              class="imgButton"
+              type="button"
+              data-lightbox-src="/assets/visual/interview-infographic-full.png"
+              data-lightbox-alt="Interview Infographic preview"
+              data-lightbox-title="Interview Infographic"
+              aria-label="View Interview Infographic image"
+            >
+              <img class="img" src="/assets/visual/interview-infographic-preview.webp" alt="Interview Infographic preview" />
+            </button>
+            <p class="muted caption">Interview infographic preview.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Website Infographic -->
+        <div class="project" id="website-infographic" style="margin-top: 14px;">
+          <div class="meta">
+            <h3 class="title">Website Infographic</h3>
+            <div class="subtitle">Class: Graphic Design II</div>
+
+            <div class="block">
+              <div class="label">Problem</div>
+              <p class="text">
+                Amateur web designers often lack knowledge of how cognitive psychology impacts web design.
+              </p>
+            </div>
+
+            <div class="block">
+              <div class="label">Solution</div>
+              <p class="text">
+                I designed the "Mind and Web Design" infographic to link six cognitive processes (Visual Attention, Memory, Wayfinding,
+                Decision-making, Emotion, Language) to web design, helping new designers build user-friendly sites.
+              </p>
+            </div>
+
+            <div class="actions">
+              <a class="button" href="https://drive.google.com/file/d/1ki7iX75fAQ-KFGzEPMeFPIKLJkyiLKi1/view?usp=sharing">Case Study</a>
+            </div>
+          </div>
+
+          <div class="media">
+            <button
+              class="imgButton"
+              type="button"
+              data-lightbox-src="/assets/visual/website-infographic-full.png"
+              data-lightbox-alt="Mind and Web Design infographic preview"
+              data-lightbox-title="Website Infographic"
+              aria-label="View Website Infographic image"
+            >
+              <img class="img" src="/assets/visual/website-infographic-preview.webp" alt="Mind and Web Design infographic preview" />
+            </button>
+            <p class="muted caption">"Mind and Web Design" infographic preview.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+        <div class="lightboxTop">
+          <div id="lightboxTitle" class="lightboxTitle"></div>
+          <button class="lightboxClose" type="button" aria-label="Close lightbox">Close</button>
+        </div>
+        <img id="lightboxImg" class="lightboxImg" alt="" />
+      </dialog>
+
+      <script>
+        (function(){
+          const dialog = document.getElementById("lightbox");
+          const img = document.getElementById("lightboxImg");
+          const titleEl = document.getElementById("lightboxTitle");
+          const closeBtn = dialog.querySelector(".lightboxClose");
+
+          function openLightbox(src, alt, title){
+            img.src = src;
+            img.alt = alt || "";
+            titleEl.textContent = title || "";
+            if (typeof dialog.showModal === "function") {
+              dialog.showModal();
+            } else {
+              window.open(src, "_blank");
+            }
+          }
+
+          function closeLightbox(){
+            if (dialog.open) dialog.close();
+            img.src = "";
+            img.alt = "";
+            titleEl.textContent = "";
+          }
+
+          document.addEventListener("click", (e) => {
+            const btn = e.target.closest("[data-lightbox-src]");
+            if (!btn) return;
+            openLightbox(btn.dataset.lightboxSrc, btn.dataset.lightboxAlt, btn.dataset.lightboxTitle);
+          });
+
+          closeBtn.addEventListener("click", closeLightbox);
+          dialog.addEventListener("click", (e) => { if (e.target === dialog) closeLightbox(); });
+          document.addEventListener("keydown", (e) => { if (e.key === "Escape" && dialog.open) closeLightbox(); });
+        })();
+      </script>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <div class="footerBrand">Kwesi Designs</div>
+          <p class="muted footerText">UX, technical writing, and systems-minded work.</p>
+          <p class="muted footerText" style="margin-top:10px;">
+            © {new Date().getFullYear()} Derrick Scott · North Carolina, USA
+          </p>
+        </div>
+
+        <div class="footerCols">
+          <div class="footerCol">
+            <div class="footerHead">Work</div>
+            <a class="footerLink" href="/ux">UX & Tech Writing</a>
+            <a class="footerLink" href="/visual">Visual Design</a>
+            <a class="footerLink" href="/game">Game Design</a>
+            <a class="footerLink" href="/explore">Exploratory</a>
+          </div>
+
+          <div class="footerCol">
+            <div class="footerHead">Links</div>
+            <a class="footerLink" href="/#contact">Contact</a>
+            <a class="footerLink" href="https://www.linkedin.com/in/derrick-scott-980109236/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="footerLink" href="https://github.com/derrickscottux-collab" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* Lightbox */
+      .lightbox{
+        border: 1px solid var(--border3);
+        background: var(--overlayBg);
+        border-radius: 18px;
+        padding: 0;
+        width: min(980px, 92vw);
+      }
+
+      .lightbox::backdrop{
+        background: var(--backdrop);
+      }
+
+      .lightboxTop{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap: 12px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .lightboxTitle{
+        font-weight: 850;
+        color: var(--text2);
+      }
+
+      .lightboxClose{
+        padding: 9px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border3);
+        background: var(--surface);
+        color: var(--text2);
+        cursor: pointer;
+      }
+
+      .lightboxClose:hover{
+        background: var(--surfaceHover);
+      }
+
+      .lightboxImg{
+        display:block;
+        width: 100%;
+        height: auto;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+      }
+
+      /* Image hover zoom */
+      .imgButton .img{
+        transition: transform .3s ease;
+      }
+
+      .imgButton:hover .img{
+        transform: scale(1.05);
+      }
+    </style>
+  </body>
+</html>
