@@ -43,12 +43,13 @@ import "../styles/global.css";
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pageIcon" aria-hidden="true"><path d="M12 22V12"/><path d="M20.27 18.27 22 20"/><path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/><circle cx="18.5" cy="16.5" r="2.5"/></svg>
         </div>
         <p class="muted" style="margin:10px 0 0; max-width: 86ch; line-height: 1.6;">
-          I focus on API documentation and developer-facing clarity. The UX and QA work below shows how I think about structure,
+          I focus on API documentation and developer-facing clarity. The product, UX, and QA work below shows how I think about structure,
           navigation, edge cases, and expected behavior.
         </p>
 
         <div class="actions" style="margin-top: 14px;">
-          <a class="button" href="#api-docs">API Docs</a>
+          <a class="button" href="#product-management">Product Mgmt</a>
+          <a class="button ghost" href="#api-docs">API Docs</a>
           <a class="button ghost" href="#open-source-docs">Open Source</a>
           <a class="button ghost" href="#ux-projects">UX</a>
           <a class="button ghost" href="#qa-testing">QA</a>
@@ -61,6 +62,7 @@ import "../styles/global.css";
         <aside class="card uxSidenav" aria-label="Jump navigation">
           <div class="uxSidenavTitle">Jump to</div>
           <a href="#top">Top</a>
+          <a href="#product-management">Product Management</a>
           <a href="#api-docs">API Documentation</a>
           <a href="#open-source-docs">Open Source Contributions</a>
           <a href="#ux-projects">UX Projects</a>
@@ -69,6 +71,67 @@ import "../styles/global.css";
         </aside>
 
         <div class="uxContent">
+          <!-- Product Management -->
+          <section id="product-management" class="card sectionCard anchorPad">
+            <div class="secLabelRow">
+              <div class="secLabel">Self-directed · NC A&T CGT 442</div>
+              <div class="secLabelNote">product requirements, competitive analysis, go-to-market</div>
+            </div>
+            <h2 class="h2" style="margin:0 0 6px;">Product Management</h2>
+            <p class="muted" style="margin:0 0 14px; max-width: 86ch;">
+              Business and product design work: defining requirements from a market gap, validating
+              against competitors, and building the go-to-market plan to launch it.
+            </p>
+
+            <div class="project" id="solux-lantern">
+              <div class="meta">
+                <h3 class="title">Solux: Light Therapy Lantern</h3>
+                <div class="subtitle">Course Project, Self-directed</div>
+
+                <div class="block">
+                  <div class="label">Problem</div>
+                  <p class="text">
+                    The seasonal affective disorder (SAD) market lacked a light therapy product that
+                    balanced clinical effectiveness with approachable, non-clinical design.
+                  </p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Solution</div>
+                  <p class="text">
+                    Ran competitive analysis across the existing SAD lamp market, defined product
+                    requirements addressing the gap, and modeled the product in Blender across three
+                    sizes to validate form factor before writing the go-to-market plan.
+                  </p>
+                </div>
+
+                <div class="block">
+                  <div class="label">Go-to-market</div>
+                  <p class="text">
+                    Built a phased launch plan covering positioning, channel sequencing, and the
+                    cross-functional org structure needed to execute it.
+                  </p>
+                </div>
+
+                <div class="actions">
+                  <a class="button ghost" href="https://drive.google.com/file/d/1_5t7kbshWyzMjs1aSfV-mBFFhM0s1kHZ/view?usp=sharing">Case Study</a>
+                </div>
+              </div>
+
+              <div class="media">
+              <button class="imgButton" type="button"
+                data-lightbox-src="/assets/ux/solux-1.png"
+                data-lightbox-alt="Solux light therapy lantern, three sizes, side angle render"
+                data-lightbox-title="Solux: Light Therapy Lantern">
+                <img class="img" src="/assets/ux/solux-1.png" alt="Solux light therapy lantern, three sizes, side angle render" />
+              </button>
+              <p class="muted caption">3D product modeling across three lantern sizes.</p>
+            </div>
+            </div>
+          </section>
+
+          <div class="divider" style="margin: 14px 0;"></div>
+
           <!-- API Docs -->
           <section id="api-docs" class="card sectionCard anchorPad">
             <div class="secLabelRow">
@@ -229,8 +292,6 @@ import "../styles/global.css";
             </div>
 
             <div class="divider"></div>
-      
-            
 
             <!-- Menu Redesign -->
             <div class="project" id="menu-redesign">
